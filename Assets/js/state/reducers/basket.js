@@ -6,7 +6,7 @@ import {
     BASKET_DECREMENT_ITEM_QUANTITY
 } from '../actions';
 
-const basket = (state = { address: '', deliveryFee: 0, deliveryTime: '', items: [] }, action) =>
+const basket = (state, action) =>
     produce(state, draft => {
         switch (action.type) { // eslint-disable-line default-case
             case BASKET_ADD_ITEM: {

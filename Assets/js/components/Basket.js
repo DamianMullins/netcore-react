@@ -1,6 +1,7 @@
 import React from 'react';
 import deliveryIcon from '../../img/icon--delivery.svg';
 import BasketItemContainer from '../containers/BasketItemContainer';
+import BasketTotals from './BasketTotals';
 
 const Basket = ({ basket, basketItems }) => (
     <div>
@@ -8,7 +9,7 @@ const Basket = ({ basket, basketItems }) => (
 
         <hr className="c-basket-separator" />
 
-        <basket-totals />
+        <BasketTotals basket={basket} basketItems={basketItems} />
 
         <hr className="c-basket-separator" />
 
