@@ -1,0 +1,55 @@
+﻿@model React.Models.MenuViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section Styles {
+    <link href="~/css/basket.css" rel="stylesheet" asp-append-version="true" />
+}
+
+  <!-- <div class="l-container">
+    <div class="l-content g g--stack--narrow g--gutter">
+      <div class="g-col g-span6">
+        <div data-menu></div>
+      </div>
+
+      <div class="g-col g-span6">
+        <div class="c-basket">
+          <p class="c-basket-heading">Basket</p>
+          <div data-basket></div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+<div class="l-container">
+    <div class="l-content g g--stack--narrow g--gutter">
+        <div class="g-col g-span6">
+            <cache expires-after="@TimeSpan.FromSeconds(10)" vary-by-route="restaurantName">
+                <div
+                    data-menu
+                    asp-prerender-module="Assets/js/server.renderMenu"
+                    asp-prerender-data="Model"></div>
+
+                <p>Current Time Inside Menu Cache Tag Helper: @DateTime.Now.</p>
+            </cache>
+        </div>
+
+        <div class="g-col g-span6">
+            <div class="c-basket">
+                <p class="c-basket-heading">Your order</p>
+
+                <div
+                    data-basket
+                    asp-prerender-module="Assets/js/server.renderBasket"
+                    asp-prerender-data="Model"></div>
+
+                <p>Current Time Inside Basket Cache Tag Helper: @DateTime.Now.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/bundle.client.js" asp-append-version="true"></script>
+}

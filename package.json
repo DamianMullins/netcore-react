@@ -1,0 +1,50 @@
+{
+  "name": "netcore-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "build:prod": "webpack --env prod",
+    "dotnet:build": "dotnet build",
+    "dotnet:run": "dotnet run",
+    "dotnet:run:prod": "dotnet run --environment \"Production\"",
+    "dev": "yarn build && yarn dotnet:build && yarn dotnet:run",
+    "prod": "yarn build:prod && yarn dotnet:build && yarn dotnet:run:prod",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aspnet-prerendering": "3.0.1",
+    "axios": "0.18.0",
+    "immer": "1.5.0",
+    "prop-types": "15.6.2",
+    "react": "16.4.1",
+    "react-dom": "16.4.1",
+    "react-redux": "5.0.7",
+    "redux": "4.0.0",
+    "redux-devtools-extension": "2.13.5",
+    "redux-logger": "3.0.6",
+    "redux-thunk": "2.3.0"
+  },
+  "devDependencies": {
+    "babel-core": "6.26.3",
+    "babel-loader": "7.1.5",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-react": "6.24.1",
+    "file-loader": "1.1.11",
+    "webpack": "4.16.3",
+    "webpack-cli": "3.1.0",
+    "webpack-dev-middleware": "3.1.3",
+    "webpack-hot-middleware": "2.22.2",
+    "webpack-merge": "4.1.3"
+  },
+  "browserslist": [
+    "> 5%",
+    "last 2 versions",
+    "Safari >= 8",
+    "not ie 10"
+  ]
+}
