@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import Basket from '../components/Basket';
+import { hot } from 'react-hot-loader';
 
 const mapStateToProps = ({ menu, basket }) => ({
     basket,
@@ -10,4 +11,4 @@ const mapStateToProps = ({ menu, basket }) => ({
     }))
 });
 
-export default connect(mapStateToProps)(Basket);
+export default hot(module)(connect(mapStateToProps)(Basket));

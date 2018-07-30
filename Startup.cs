@@ -46,11 +46,11 @@ namespace React
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                // app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
-                // {
-                //     HotModuleReplacement = true,
-                //     ConfigFile = "webpack.config.js"
-                // });
+                app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
+                {
+                    HotModuleReplacement = true,
+                    ConfigFile = "webpack.config.js"
+                });
             }
             else
             {
