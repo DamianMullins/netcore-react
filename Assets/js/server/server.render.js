@@ -1,7 +1,7 @@
 const prerendering = require('aspnet-prerendering');
 
 module.exports = ({ bundleName, setGlobalState = false }) => {
-    const { bundleRenderer } = require(`../../wwwroot/js/${bundleName}`);
+    const { bundleRenderer } = require(`../../../wwwroot/js/${bundleName}`);
 
     return prerendering.createServerRenderer(({ data }) => {
         return new Promise((resolve, reject) => {

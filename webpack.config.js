@@ -35,7 +35,7 @@ module.exports = env => {
 
     const menuBundleConfig = merge(sharedConfig, {
         target: 'node',
-        entry: { 'bundle.server.menu': './Assets/js/server.menu.js' },
+        entry: { 'bundle.server.menu': './Assets/js/server/server.menu.js' },
         output: {
             libraryTarget: 'commonjs2'
         }
@@ -43,7 +43,7 @@ module.exports = env => {
 
     const basketBundleConfig = merge(sharedConfig, {
         target: 'node',
-        entry: { 'bundle.server.basket': './Assets/js/server.basket.js' },
+        entry: { 'bundle.server.basket': './Assets/js/server/server.basket.js' },
         output: {
             libraryTarget: 'commonjs2'
         }

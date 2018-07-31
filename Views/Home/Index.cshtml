@@ -28,7 +28,7 @@
             <cache expires-after="@TimeSpan.FromSeconds(10)" vary-by-route="restaurantName">
                 <div
                     data-menu
-                    asp-prerender-module="Assets/js/server.renderMenu"
+                    asp-prerender-module="Assets/js/server/server.renderMenu"
                     asp-prerender-data="Model"></div>
 
                 <p>Current Time Inside Menu Cache Tag Helper: @DateTime.Now.</p>
@@ -39,7 +39,7 @@
             <div class="c-basket">
                 <div
                     data-basket
-                    asp-prerender-module="Assets/js/server.renderBasket"
+                    asp-prerender-module="Assets/js/server/server.renderBasket"
                     asp-prerender-data="Model"></div>
 
                 <p>Current Time Inside Basket Cache Tag Helper: @DateTime.Now.</p>
