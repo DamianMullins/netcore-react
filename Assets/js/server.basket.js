@@ -1,7 +1,7 @@
 import { createApp } from './app';
-import bundlehelper from './bundleHelper';
+import { componentToString } from './helpers/bundleHelper';
 
 export const bundleRenderer = context => {
     const { BasketContainer, configureStore } = createApp();
-    return bundlehelper(BasketContainer, configureStore, context);
+    return componentToString (BasketContainer, configureStore, context);
 };

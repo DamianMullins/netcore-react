@@ -1,7 +1,6 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
 import { createApp } from './app';
+import { createComponent } from './helpers/componentHelper';
 
 const { MenuContainer, BasketContainer, configureStore } = createApp();
 let store = {};
@@ -13,15 +12,11 @@ if (window.__INITIAL_STATE__) {
 }
 
 ReactDOM.hydrate(
-  <Provider store={store}>
-    <MenuContainer />
-  </Provider>,
+  createComponent(MenuContainer, store),
   document.querySelector('[data-menu]')
 );
 
 ReactDOM.hydrate(
-    <Provider store={store}>
-        <BasketContainer />
-    </Provider>,
-    document.querySelector('[data-basket]')
+  createComponent(BasketContainer, store),
+  document.querySelector('[data-basket]')
 );
