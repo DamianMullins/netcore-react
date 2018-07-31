@@ -1,4 +1,5 @@
 const prerendering = require('aspnet-prerendering');
+require('./intlPolyfill');
 
 module.exports = ({ bundleName, setGlobalState = false }) => {
     const { bundleRenderer } = require(`../../../wwwroot/js/${bundleName}`);

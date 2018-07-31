@@ -20,6 +20,8 @@
     "axios": "0.18.0",
     "he": "1.1.1",
     "immer": "1.5.0",
+    "intl": "1.2.5",
+    "intl-locales-supported": "1.0.0",
     "prop-types": "15.6.2",
     "react": "16.4.1",
     "react-dom": "16.4.1",

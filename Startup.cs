@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -57,6 +58,12 @@ namespace React
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
+
+            // Change this to set the locale for the page
+            var cultureInfo = new CultureInfo("es-ES");
+
+            CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
+            CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using React.Models;
@@ -66,7 +67,8 @@ namespace React.Controllers
                         }
                     },
                     DeliveryTime = "Delivery ASAP"
-                }
+                },
+                Locale = CultureInfo.CurrentUICulture.ToString()
             };
         }
 

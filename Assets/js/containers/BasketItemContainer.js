@@ -1,10 +1,16 @@
 import { connect } from 'react-redux';
 import { removeOrDecrementItem } from '../state/actions';
 import BasketItem from '../components/BasketItem';
+import { numberFormats } from '../i18n';
 
-const mapStateToProps = (state, { item }) => ({
-    itemTotal: item.price * item.quantity
-});
+const mapStateToProps = ({ locale }, { item }) => {
+    const { currency } = numberFormats[locale];
+
+    return {
+        currency,
+        itemTotal: item.price * item.quantity
+    };
+};
 
 const mapDispatchToProps = (dispatch, { item }) => ({
     onRemoveItemClick: () => dispatch(removeOrDecrementItem(item.id))

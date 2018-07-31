@@ -1,19 +1,9 @@
-export const messages = {
-    'en-US': {
-        'menu.addItem': 'Add {item} to basket',
-        'basket.title': 'Your order',
-        'basket.removeItem': 'Remove {item} from basket',
-        'basket.deliveryFee': 'Delivery Fee',
-        'basket.subtotal': 'Subtotal',
-        'basket.total': 'Total'
-    },
+import { addLocaleData } from 'react-intl';
+import en from 'react-intl/locale-data/en';
+import es from 'react-intl/locale-data/es';
 
-    'en-GB': {
-        'menu.addItem': 'Add {item} to basket',
-        'basket.title': 'Your order',
-        'basket.removeItem': 'Remove {item} from basket',
-        'basket.deliveryFee': 'Delivery Fee',
-        'basket.subtotal': 'Subtotal',
-        'basket.total': 'Total'
-    }
-};
+addLocaleData([...en, ...es]);
+
+export * from 'react-intl';
+export { default as messages } from './messages';
+export { default as numberFormats } from './numberFormats';
