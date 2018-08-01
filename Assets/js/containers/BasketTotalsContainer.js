@@ -4,7 +4,6 @@ import { numberFormats } from '../i18n';
 
 const mapStateToProps = ({ locale, basket, menu }) => {
     const { currency } = numberFormats[locale];
-
     const basketItems = basket.items.map(({ id, quantity }) => ({
         ...menu.items.find(item => item.id === id),
         quantity
@@ -20,6 +19,4 @@ const mapStateToProps = ({ locale, basket, menu }) => {
     };
 };
 
-export default connect(
-    mapStateToProps,
-)(BasketTotals);
+export default connect(mapStateToProps)(BasketTotals);

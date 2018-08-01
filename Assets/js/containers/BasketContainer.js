@@ -11,4 +11,6 @@ const mapStateToProps = ({ menu, basket }) => ({
     }))
 });
 
-export default hot(module)(connect(mapStateToProps)(Basket));
+export default hot(module)(
+    connect(mapStateToProps)(Basket)
+);

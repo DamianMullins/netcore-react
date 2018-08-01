@@ -3,13 +3,9 @@ import { addOrIncrementItem } from '../state/actions';
 import MenuItem from '../components/MenuItem';
 import { numberFormats } from '../i18n';
 
-const mapStateToProps = ({ locale }) => {
-    const { currency } = numberFormats[locale];
-
-    return {
-        currency
-    };
-};
+const mapStateToProps = ({ locale }) => ({
+    currency: numberFormats[locale].currency
+});
 
 const mapDispatchToProps = (dispatch, { item }) => ({
     onAddItemClick: () => dispatch(addOrIncrementItem(item.id))

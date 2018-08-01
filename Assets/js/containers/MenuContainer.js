@@ -6,4 +6,6 @@ const mapStateToProps = ({ menu }) => ({
     menu
 });
 
-export default hot(module)(connect(mapStateToProps)(Menu));
+export default hot(module)(
+    connect(mapStateToProps)(Menu)
+);
