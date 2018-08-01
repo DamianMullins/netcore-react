@@ -26,7 +26,6 @@ const Basket = ({ basket, basketItems }) => (
 
         <p className="c-basket-deliveryOrCollectionDetails">
             <img src={deliveryIcon} className="icon-deliveryOrCollection" alt="" />
-            {basket.deliveryTime}
         </p>
     </div>
 );

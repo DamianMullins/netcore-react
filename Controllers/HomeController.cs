@@ -65,8 +65,7 @@ namespace React.Controllers
                             Id = 2,
                             Quantity = 2
                         }
-                    },
-                    DeliveryTime = "Delivery ASAP"
+                    }
                 },
                 Locale = CultureInfo.CurrentUICulture.ToString()
             };

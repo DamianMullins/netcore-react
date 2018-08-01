@@ -6,7 +6,7 @@ import {
     BASKET_DECREMENT_ITEM_QUANTITY
 } from '../actions';
 
-const initialState = { address: '', deliveryFee: 0, deliveryTime: '', items: [] };
+const initialState = { address: '', deliveryFee: 0, items: [] };
 
 const basket = (state = initialState, action) =>
     produce(state, draft => {
