@@ -1,4 +1,4 @@
-# ASP.NET Core 2 web application with Vue.JS 2.5 and Server Side Rendering
+# ASP.NET Core 2 web application with React.JS 2.5 and Server Side Rendering
 
 This project is a proof of concept to prove that server side rendering is possible for multiple elements on a page, i.e. not a SPA application.
 

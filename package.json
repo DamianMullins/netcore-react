@@ -1,8 +1,13 @@
 {
   "name": "netcore-react",
   "version": "1.0.0",
-  "description": "ASP.NET Core 2 web application with Vue.JS 2.5 and Server Side Rendering",
-  "main": "index.js",
+  "private": true,
+  "description": "ASP.NET Core 2 web application with React.JS 2.5 and Server Side Rendering",
+  "author": "Damian Mullins <damian.mullins@just-eat.com> (http://www.damianmullins.com)",
+  "license": "ISC",
+  "engines": {
+    "node": ">=8.6.0"
+  },
   "scripts": {
     "build": "webpack",
     "build:prod": "webpack --env prod",
@@ -12,11 +17,6 @@
     "dev": "yarn build && yarn dotnet:build && yarn dotnet:run",
     "prod": "yarn build:prod && yarn dotnet:build && yarn dotnet:run:prod",
     "test": "jest"
-  },
-  "author": "Damian Mullins <damian.mullins@just-eat.com> (http://www.damianmullins.com)",
-  "license": "ISC",
-  "engines": {
-    "node": ">=8.6.0"
   },
   "dependencies": {
     "aspnet-prerendering": "3.0.1",
