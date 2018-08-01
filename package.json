@@ -2,7 +2,7 @@
   "name": "netcore-react",
   "version": "1.0.0",
   "private": true,
-  "description": "ASP.NET Core 2 web application with React.JS 2.5 and Server Side Rendering",
+  "description": "ASP.NET Core 2 web application with React.JS 16.4.1 and Server Side Rendering",
   "author": "Damian Mullins <damian.mullins@just-eat.com> (http://www.damianmullins.com)",
   "license": "ISC",
   "engines": {
