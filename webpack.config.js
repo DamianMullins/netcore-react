@@ -37,7 +37,8 @@ module.exports = env => {
         target: 'node',
         entry: { 'bundle.server.menu': './Assets/js/server/server.menu.js' },
         output: {
-            libraryTarget: 'commonjs2'
+            libraryTarget: 'commonjs2',
+            path: path.join(__dirname, 'dist')
         }
     });
 
@@ -45,7 +46,8 @@ module.exports = env => {
         target: 'node',
         entry: { 'bundle.server.basket': './Assets/js/server/server.basket.js' },
         output: {
-            libraryTarget: 'commonjs2'
+            libraryTarget: 'commonjs2',
+            path: path.join(__dirname, 'dist')
         }
     });
 
